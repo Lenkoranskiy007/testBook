@@ -1,0 +1,85 @@
+.page {
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  &-dark {
+    background-color: #212121;
+  }
+  &-light {
+    background-color: #f9f6f1;
+  }
+}
+
+.wrapper {
+  max-width: 1110px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.header {
+  background: url(assets/124383.jpeg) no-repeat;
+  display: flex;
+  justify-content: center;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  &-title {
+    text-align: center;
+    color: white;
+  }
+
+  &-sort {
+    padding-top: 20px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    &-category {
+      p {
+        padding-right: 10px;
+        color: white;
+        display: inline;
+        font-size: 20px;
+      }
+    }
+    &-sorting {
+      p {
+        padding-right: 10px;
+        color: white;
+        display: inline;
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.content-items {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 100px;
+
+  .book-block {
+    width: 200px;
+    height: 300px;
+    border: 1px solid black;
+    &-image {
+      width: 100px;
+      height: 120px;
+      padding: 50px;
+    }
+    &-category {
+      font-size: 20px;
+      padding-left: 10px;
+    }
+    &-name {
+      font-size: 23px;
+      padding-left: 10px;
+    }
+    &-author {
+      font-size: 20px;
+      padding-left: 10px;
+    }
+  }
+}
