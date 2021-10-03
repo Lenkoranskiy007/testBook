@@ -12,6 +12,7 @@
 
 .wrapper {
   max-width: 1110px;
+
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
@@ -21,65 +22,141 @@
   background: url(assets/124383.jpeg) no-repeat;
   display: flex;
   justify-content: center;
+  .nav {
+    display: flex;
+    flex-direction: column;
+    &-title {
+      text-align: center;
+      color: white;
+      a {
+        text-decoration: none;
+        color: white;
+      }
+    }
+
+    &-sort {
+      padding-top: 20px;
+      padding-bottom: 30px;
+      display: flex;
+      justify-content: space-between;
+      &-category {
+        p {
+          padding-right: 10px;
+          color: white;
+          display: inline;
+          font-size: 20px;
+        }
+      }
+      &-sorting {
+        p {
+          padding-right: 10px;
+          color: white;
+          display: inline;
+          font-size: 20px;
+        }
+      }
+    }
+  }
 }
 
-.nav {
-  display: flex;
-  flex-direction: column;
-  &-title {
-    text-align: center;
-    color: white;
-  }
-
-  &-sort {
-    padding-top: 20px;
-    padding-bottom: 30px;
-    display: flex;
-    justify-content: space-between;
-    &-category {
-      p {
-        padding-right: 10px;
-        color: white;
-        display: inline;
-        font-size: 20px;
-      }
-    }
-    &-sorting {
-      p {
-        padding-right: 10px;
-        color: white;
-        display: inline;
-        font-size: 20px;
-      }
-    }
-  }
+.circular {
+  margin: 0 auto;
+  position: absolute;
+  left: 600px;
 }
 
 .content-items {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  flex-wrap: wrap;
   padding-top: 100px;
 
+  p {
+    position: absolute;
+    text-align: center;
+    top: 230px;
+    left: 570px;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
   .book-block {
-    width: 200px;
-    height: 300px;
-    border: 1px solid black;
+    width: 240px;
+    height: 440px;
+    border: 1px solid rgb(206, 204, 204);
+    margin-bottom: 30px;
+    background-color: rgb(224, 218, 218);
     &-image {
       width: 100px;
-      height: 120px;
+      height: 160px;
       padding: 50px;
+      padding-left: 70px;
     }
     &-category {
       font-size: 20px;
       padding-left: 10px;
+      padding-bottom: 5px;
     }
     &-name {
-      font-size: 23px;
+      font-size: 16px;
       padding-left: 10px;
     }
     &-author {
+      display: flex;
+      padding-top: 10px;
       font-size: 20px;
       padding-left: 10px;
+    }
+  }
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+}
+
+.content-book {
+  display: flex;
+  border: 1px solid #f1f1f1;
+  justify-content: space-around;
+  &-item {
+    width: 50%;
+    background-color: rgb(204, 196, 196);
+    img {
+      width: 350px;
+      padding: 70px;
+    }
+  }
+  &-description {
+    width: 50%;
+    background-color: #f9f6f1;
+
+    &-category {
+      padding: 25px;
+      font-size: 17px;
+      color: rgb(136, 134, 134);
+    }
+    &-name {
+      padding: 25px;
+      font-size: 25px;
+    }
+    &-author {
+      color: rgb(165, 163, 163);
+      padding: 25px;
+      font-size: 20px;
+    }
+
+    &-info {
+      margin-top: 50px;
+      width: 600px;
+      margin-left: 30px;
+      border: 1px solid black;
+      p {
+        padding: 30px;
+        font-size: 20px;
+      }
     }
   }
 }
