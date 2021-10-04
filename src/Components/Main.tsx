@@ -26,7 +26,7 @@ export const Main = (props: MainType) => {
           {props.items &&
             props.items.slice(0, visible).map((item: ItemsApiType) => {
               if (typeof item.volumeInfo.imageLinks === 'undefined') {
-                return <div></div>;
+                return '';
               }
               return (
                 <Link key={item.id} to={`/books/${item.id}`}>
