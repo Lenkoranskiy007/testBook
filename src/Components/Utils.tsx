@@ -5,6 +5,8 @@ import IconButton from '@mui/material/IconButton';
 import SearchIcon from '@mui/icons-material/Search';
 import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
 
 //Типизация для Компоненты TextField
 type InputBaseType = {
@@ -39,5 +41,19 @@ export function CircularIndeterminate() {
     <Box className="circular" sx={{ display: 'flex' }}>
       <CircularProgress />
     </Box>
+  );
+}
+
+type BtnType = {
+  showeMoreItems: () => void;
+};
+//@ts-ignore
+export function BasicButtons(props: BtnType) {
+  return (
+    <Stack spacing={2} direction="row">
+      <Button onClick={props.showeMoreItems} variant="text">
+        Load more
+      </Button>
+    </Stack>
   );
 }

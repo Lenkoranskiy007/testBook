@@ -12,10 +12,15 @@
 
 .wrapper {
   max-width: 1110px;
-
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+@media (max-width: 414px) {
+  .wrapper {
+    max-width: none;
+  }
 }
 
 .header {
@@ -62,7 +67,6 @@
 .circular {
   margin: 0 auto;
   position: absolute;
-  left: 600px;
 }
 
 .content-items {
@@ -73,10 +77,11 @@
 
   p {
     position: absolute;
-    text-align: center;
-    top: 230px;
-    left: 570px;
+    margin: 0 auto;
+    top: 250px;
+    font-size: 25px;
   }
+
   a {
     text-decoration: none;
     color: black;

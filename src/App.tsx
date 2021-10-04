@@ -24,7 +24,7 @@ function App() {
   //При нажатии на button, вызываю thunk,передавая ей параметры из локального стейта.
   const handleSubmit = (event: any) => {
     event.preventDefault();
-    dispatch(fetchItemsTC(search, selectCategories));
+    dispatch(fetchItemsTC(search, selectCategories, sortCategories));
   };
 
   //Прослушиватель для input
@@ -44,8 +44,15 @@ function App() {
         setSortCategories={setSortCategories}
         handleSubmit={handleSubmit}
       />
-      <Route exact path="/" render={() => <Main isLoading={isLoading} items={items} />} />
-      <Route exact path="/books/:id" render={() => <Books items={items} />} />
+      <Switch>
+        <Route exact path="/" render={() => <Main isLoading={isLoading} items={items} />} />
+        <Route exact path="/books/:id" render={() => <Books items={items} />} />
+        <Route
+          exact
+          path="*"
+          render={() => <h1 style={{ textAlign: 'center' }}>404: страница недоступна</h1>}
+        />
+      </Switch>
     </>
   );
 }

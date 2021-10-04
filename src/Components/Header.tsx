@@ -20,9 +20,9 @@ export const Header = (props: HeaderType) => {
         <header className="header">
           <div className="nav">
             <div className="nav-title">
-              <NavLink to="/">
+              <a href="/">
                 <h1>Search for books</h1>
-              </NavLink>
+              </a>
             </div>
             <div className="nav-search">
               <CustomizedInputBase

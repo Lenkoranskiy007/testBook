@@ -102,23 +102,25 @@ const setIsLoadedAC = (isLoaded: boolean): SetIsLoadedType => {
 
 
 
-//thunk  с помощью которой , делаю запрос на сервер , и получаю книги, исходя из тех данных которые ввел клиент.
-export const fetchItemsTC = (booksName: string, categories: string) => {
+//thunk - делаю запрос на сервер , и получаю книги, исходя из тех данных которых ввел клиент.
+export const fetchItemsTC = (booksName: string, categories: string, relevance: string) => {
   
   return (dispatch: Dispatch) => {
     dispatch(setIsLoadedAC(true))
-    axios.get(`https://www.googleapis.com/books/v1/volumes?q=${booksName}&=${categories}:keyes&key=AIzaSyChwIGBgq4bs41X9C1FHNxtcg0tgU-rATo`).then(res => {  
+    axios.get(`https://www.googleapis.com/books/v1/volumes?q=${booksName}+subject=${categories}&orderBy=${relevance}&key=AIzaSyChwIGBgq4bs41X9C1FHNxtcg0tgU-rATo`).then(res => {  
      dispatch(setItemsAC(res.data.items))
+     console.log(res.data.items)
      dispatch(setIsLoadedAC(false))
      }).catch(err => {
        console.log(err)
+       
    
       })
   }
 }
 
 
-//thunk с помощью ,которой  делаю запрос на сервер  и получаю книги для отрисовки на главной странице. Данные захардкодил.
+//thunk - делаю запрос на сервер  и получаю книги для отрисовки на главной странице. Данные захардкодил.
 export const getItemsTC = () => {
   return (dispatch: Dispatch) => {
     dispatch(setIsLoadedAC(true))
@@ -130,6 +132,7 @@ export const getItemsTC = () => {
 }
 }
 
+// https://www.googleapis.com/books/v1/volumes?q=${booksName}+subject:${categories}&orderBy=relevance&key=AIzaSyChwIGBgq4bs41X9C1FHNxtcg0tgU-rATo
 
 
 
