@@ -36,6 +36,7 @@ export function CustomizedInputBase(props: InputBaseType) {
   );
 }
 
+// Компонент Loader
 export function CircularIndeterminate() {
   return (
     <Box className="circular" sx={{ display: 'flex' }}>

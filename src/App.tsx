@@ -32,7 +32,7 @@ function App() {
     let text = e.currentTarget.value;
     setSearch(text);
   };
-
+  //Отрисовка всех наших дочерних компонентов
   return (
     <>
       <Header

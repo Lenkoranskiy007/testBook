@@ -92,9 +92,12 @@ type SetIsLoadedType = {
 
 
 
+//Action creator для добавления в  стейт книг
 const setItemsAC = (items: ItemsApiType): SetItemsType => {
  return {type: SET_ITEMS, items}
 }
+
+//Action creator для переопределения в стейте значение лоадера
 const setIsLoadedAC = (isLoaded: boolean): SetIsLoadedType => {
   return {type: SET_IS_LOADED, isLoaded}
 } 

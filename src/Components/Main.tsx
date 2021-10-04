@@ -12,6 +12,7 @@ type MainType = {
 export const Main = (props: MainType) => {
   const [visible, setVisible] = useState(4);
 
+  //При клике на Load more - шаг + 30
   const showeMoreItems = () => {
     setVisible((prevValue) => prevValue + 30);
   };
@@ -50,6 +51,7 @@ export const Main = (props: MainType) => {
               );
             })}
         </div>
+
         <div className="button">
           <BasicButtons showeMoreItems={showeMoreItems} />
         </div>

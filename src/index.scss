@@ -89,7 +89,7 @@
 
   .book-block {
     width: 240px;
-    height: 440px;
+    height: 460px;
     border: 1px solid rgb(206, 204, 204);
     margin-bottom: 30px;
     background-color: rgb(224, 218, 218);
@@ -194,48 +194,3 @@
     }
   }
 }
-
-// @media (max-width: 1298px) {
-//   &-description {
-//     width: none;
-//     &-info {
-//       margin-top: 30px;
-//       width: 100%;
-//       margin-left: 20px;
-//       border: 1px solid black;
-//       p {
-//         padding: 10px;
-//         font-size: 18px;
-//       }
-//     }
-//   }
-// }
-// @media (max-width: 639px) {
-//   &-description {
-//     width: 100%;
-//     &-info {
-//       width: 100%;
-//       margin-top: 20px;
-//       margin-left: 10px;
-
-//       p {
-//         padding: 30px;
-//         font-size: 18px;
-//       }
-//     }
-//   }
-// }
-
-// @media (max-width: 432px) {
-//   &-description {
-//     width: 70%;
-//     &-info {
-//       width: 100%;
-
-//       p {
-//         padding: 5px;
-//         font-size: 18px;
-//       }
-//     }
-//   }
-// }
